@@ -438,7 +438,7 @@
                         </div>
                         <div class="ml-12">
                             <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                <select style="width: 300px;" id="selectnih" name="selectnih" class="">
+                                <select style="width: 300px;" id="selectnih" name="selectnih" class="selectnih">
                                     <option value="1">001 - Ikan</option>
                                     <option value="2">002 - Bebek </option>
                                     <option value="2">003 - Ular </option>
@@ -472,7 +472,7 @@
                         </div>
                     </div>
                 </div>
-                <table id="tbdata" class="table table-striped" style="width:100%">
+                <table id="tbdata" class="table table-striped" style="width:100%;">
                     <thead>
                         <tr>
                             <th style="width: 10px; text-align: center">No</th>
@@ -504,7 +504,44 @@
                 </div>
             </div>
 
-            <div style="margin-top: 40px;" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+            <div style="margin-bottom: 30px;" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
+                                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                            <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://www.daterangepicker.com/#example5" class="underline text-gray-900 dark:text-white">Onchange</a></div>
+                        </div>
+                    </div>
+                </div>
+                <table style="margin-left: 30px;margin-bottom: 30px;">
+                    <tr>
+                        <td>Select </td>
+                        <td>:
+                            <select style="width: 300px;" id="schange" name="" class="selectnih">
+                                <option value="satria">Satria Girinanda</option>
+                                <option value="john">John Doe</option>
+                                <option value="raka">Raka Pratama</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Value </td>
+                        <td>:<input type="text" id="vchange1"></td>
+                    </tr>
+                    <tr>
+                        <td>Hide/Show </td>
+                        <td>:
+                            <input style="display: none;" type="text" id="vchange2" value="Satria Girinanda">
+                            <input style="display: none;" type="text" id="vchange3" value="John Doe">
+                            <input style="display: none;" type="text" id="vchange4" value="Raka Pratama">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div style="margin-top: 80px;" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                 <div class="grid grid-cols-1 md:grid-cols-2">
                     <div class="p-6">
                         TY
@@ -528,7 +565,7 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#selectnih').select2();
+        $('.selectnih').select2();
 
         $("#tbdata").DataTable({
             ajax: true,
@@ -558,11 +595,31 @@
         });
 
     });
+
     $(function() {
         $('input[name="daterange"]').daterangepicker({
             opens: 'left'
         }, function(start, end, label) {
             console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        });
+
+        // onchange
+        $('#schange').on('change', function() {
+            $('#vchange1').val(this.value);
+
+            if ($('#schange').val() == 'satria') {
+                $('#vchange2').show();
+                $('#vchange3').hide();
+                $('#vchange4').hide();
+            } else if ($('#schange').val() == 'john') {
+                $('#vchange3').show();
+                $('#vchange2').hide();
+                $('#vchange4').hide();
+            } else {
+                $('#vchange4').show();
+                $('#vchange3').hide();
+                $('#vchange2').hide();
+            }
         });
     });
 </script>
