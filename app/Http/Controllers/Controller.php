@@ -38,8 +38,33 @@ class Controller extends BaseController
                 ->addIndexColumn()
                 ->make(true);
         }
-        // dd($data);
-        return view('welcome', ['data' => $data]);
+
+        // get provinsi
+        $curlprov = curl_init();
+        curl_setopt_array($curlprov, [
+            CURLOPT_URL => "http://dev.farizdotid.com/api/daerahindonesia/provinsi",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => array(
+                "Content-Type: application/json"
+            )
+        ]);
+        $responseprov = curl_exec($curlprov);
+        curl_close($curlprov);
+        $dataprov = json_decode($responseprov);
+        if (request()->ajax()) {
+            return DataTables::of($dataprov)
+                ->addIndexColumn()
+                ->make(true);
+        }
+        $dprovinsi = $dataprov->provinsi;
+        // dd($dprovinsi);
+        return view('welcome', ['data' => $data], ['provinsi' => $dprovinsi]);
 
         // $data = Covid::orderBy('id', 'DESC')->get();
         // if (request()->ajax()) {
