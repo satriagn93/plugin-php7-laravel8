@@ -16,6 +16,10 @@ class Controller extends BaseController
 {
     public function index()
     {
+        // $a = 11;
+        // $b = "http://www.emsifa.com/api-wilayah-indonesia/api/regencies/$a.json";
+        // dd($b);
+
         $curl = curl_init();
         curl_setopt_array($curl, [
             CURLOPT_URL => "https://kodepos-2d475.firebaseio.com/kota_kab/k69.json?print=pretty",
@@ -42,7 +46,7 @@ class Controller extends BaseController
         // get provinsi
         $curlprov = curl_init();
         curl_setopt_array($curlprov, [
-            CURLOPT_URL => "http://dev.farizdotid.com/api/daerahindonesia/provinsi",
+            CURLOPT_URL => "http://www.emsifa.com/api-wilayah-indonesia/api/provinces.json",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_ENCODING => "",
@@ -56,13 +60,12 @@ class Controller extends BaseController
         ]);
         $responseprov = curl_exec($curlprov);
         curl_close($curlprov);
-        $dataprov = json_decode($responseprov);
+        $dprovinsi = json_decode($responseprov);
         if (request()->ajax()) {
-            return DataTables::of($dataprov)
+            return DataTables::of($dprovinsi)
                 ->addIndexColumn()
                 ->make(true);
         }
-        $dprovinsi = $dataprov->provinsi;
         // dd($dprovinsi);
         return view('welcome', ['data' => $data], ['provinsi' => $dprovinsi]);
 
@@ -73,5 +76,33 @@ class Controller extends BaseController
         //         ->make(true);
         // }
         // return view('welcome', ['data' => $data]);
+    }
+
+    public function kabupaten(Request $request, $id)
+    {
+        $curl = curl_init();
+        curl_setopt_array($curl, [
+            CURLOPT_URL => "http://www.emsifa.com/api-wilayah-indonesia/api/regencies/$id.json",
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 30,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "GET",
+            CURLOPT_HTTPHEADER => array(
+                "Content-Type: application/json"
+            )
+        ]);
+        $response = curl_exec($curl);
+        curl_close($curl);
+        $kabupaten = json_decode($response);
+
+        // $covid = Covid::orderBy('id', 'DESC')->get();
+
+        return response()->json([
+            'success' => true,
+            'kabupaten' => $kabupaten,
+        ], 200);
     }
 }

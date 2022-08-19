@@ -556,18 +556,22 @@
                     <tr>
                         <td>Provinsi </td>
                         <td>:
-                            <select style="width: 300px;" id="getprov" name="" class="selectnih">
+                            <select style="width: 300px;" id="provinsiIndex" name="provinsiIndex" class="selectnih">
                                 <option value="0">Select</option>
                                 <!-- <option value="1">001 - Ikan</option> -->
                                 @foreach ($provinsi as $item)
-                                <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                                <option value="{{ $item->id }}">{{ $item->name }}</option>
                                 @endforeach
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td>Kabupaten </td>
-                        <td>: </td>
+                        <td>:
+                            <select style="width: 300px;" name="kabupatenIndex" id="kabupatenIndex" class="selectnih">
+                                <option value=""></option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <td>Kecamatan </td>
@@ -586,6 +590,7 @@
         </div>
     </div>
 </body>
+
 <!-- select2 -->
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
@@ -597,6 +602,7 @@
 <!-- daterange -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -628,7 +634,6 @@
                 },
             ]
         });
-
     });
 
     $(function() {
@@ -658,3 +663,4 @@
         });
     });
 </script>
+<script src="{{ asset('management/kabupaten.js') }}"></script>
