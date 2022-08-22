@@ -406,6 +406,23 @@
                 color: rgba(107, 114, 128, var(--tw-text-opacity))
             }
         }
+
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 7px 18px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button1 {
+            font-size: 10px;
+        }
     </style>
 
     <style>
@@ -548,17 +565,16 @@
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500">
                                 <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                             </svg>
-                            <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://farizdotid.com/dokumentasi-api-daerah-indonesia/" class="underline text-gray-900 dark:text-white">Select get Provinsi API</a></div>
+                            <div class="ml-4 text-lg leading-7 font-semibold"><a href="http://www.emsifa.com/api-wilayah-indonesia/" class="underline text-gray-900 dark:text-white">Select get Provinsi API</a></div>
                         </div>
                     </div>
                 </div>
                 <table style="margin-left: 30px;margin-bottom: 30px;">
                     <tr>
                         <td>Provinsi </td>
-                        <td>:
+                        <td colspan="2">:
                             <select style="width: 300px;" id="provinsiIndex" name="provinsiIndex" class="selectnih">
                                 <option value="0">Select</option>
-                                <!-- <option value="1">001 - Ikan</option> -->
                                 @foreach ($provinsi as $item)
                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                                 @endforeach
@@ -572,18 +588,29 @@
                                 <option value=""></option>
                             </select>
                         </td>
+                        <td>
+                            <button id="tampilkecamatan" name="tampilkecamatan" class="button button1">Tampilkan Kecamatan</button>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Kecamatan </td>
-                        <td>: </td>
-                    </tr>
+                </table>
+                <div>Tabel Kecamatan</div>
+                <table id="tbkecamatan" class="table table-striped" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th style="width: 10px; text-align: center">No</th>
+                            <th>ID</th>
+                            <th>Nama Kecamatan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
                 </table>
             </div>
 
             <div style="margin-top: 80px;" class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                 <div class="grid grid-cols-1 md:grid-cols-2">
                     <div class="p-6">
-                        TY
+                        ((())))(02009)())()()0209093090()()()092090090
                     </div>
                 </div>
             </div>

@@ -8,7 +8,6 @@ $(document).ready(function(){
         if (provinsi) {
             $.ajax({
                 url: "/kabupaten/" + provinsi,
-                // dataType: 'json',
                 beforeSend: function (request) {
                     $("#kabupatenIndex option").remove();
                     $("#kabupatenIndex").append(
@@ -36,5 +35,49 @@ $(document).ready(function(){
             $("#kabupatenIndex").val("").trigger("change");
         }
     }
+    
+    var getFilter = function() {
+        return {
+          'kabupatenIndex': $('#kabupatenIndex').val(),
+        }
+      }
+  
+    var btnSearch = $('#tampilkecamatan')
+        btnSearch.on('click', function() {
+        dataFilter.draw()
+    })
+
+    window.dataFilter = $('#tbkecamatan').DataTable({
+        responsive: true,
+        processing: true,
+        serverSide: true,
+        ajax: {
+          url: "/getkecamatan/",
+          data: function(data) {
+            data.filters = getFilter()
+          }
+        },
+        columns: [{
+            data: 'DT_RowIndex',
+            'orderable': false,
+            'searchable': false,
+            class: 'text-center'
+          },
+          {
+            data: 'id',
+            name: 'id',
+            class: "text-left",
+            'orderable': false,
+            'searchable': false
+          },
+          {
+            data: 'name',
+            name: 'name',
+            'orderable': false,
+            'searchable': false,
+            class: "text-left"
+          }
+        ]
+      });
 
 });
