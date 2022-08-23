@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\Controller::class, 'index'])->name('dashboard.get');
 Route::get('/kabupaten/{id}', [App\Http\Controllers\Controller::class, 'kabupaten'])->name('kabupaten.json');
 Route::get('getkecamatan', [App\Http\Controllers\Controller::class, 'getkecamatan'])->name('getkecamatan');
+Route::get('cetakpdf', [App\Http\Controllers\Controller::class, 'cetakpdf'])->name('cetakpdf');

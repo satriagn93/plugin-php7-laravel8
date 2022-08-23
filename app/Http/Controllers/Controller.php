@@ -8,14 +8,19 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use App\Models\Covid;
+use Illuminate\Support\Facades\File;
 
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\DB;
+use Barryvdh\DomPDF\Facade\Pdf as PDF;
 
 class Controller extends BaseController
 {
     public function index()
     {
+        // $getpegawai = DB::table('pegawais')->get();
+        // dd($getpegawai);
+
         $curl = curl_init();
         curl_setopt_array($curl, [
             CURLOPT_URL => "https://kodepos-2d475.firebaseio.com/kota_kab/k69.json?print=pretty",
@@ -126,5 +131,11 @@ class Controller extends BaseController
                 ->addIndexColumn()
                 ->make(true);
         }
+    }
+
+    public function cetakpdf(Request $request)
+    {
+        $pdf = PDF::loadView('contohpdf')->setPaper('a4', 'portrait');
+        return $pdf->download();
     }
 }
