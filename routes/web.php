@@ -17,3 +17,4 @@ Route::get('/', [App\Http\Controllers\Controller::class, 'index'])->name('dashbo
 Route::get('/kabupaten/{id}', [App\Http\Controllers\Controller::class, 'kabupaten'])->name('kabupaten.json');
 Route::get('getkecamatan', [App\Http\Controllers\Controller::class, 'getkecamatan'])->name('getkecamatan');
 Route::get('cetakpdf', [App\Http\Controllers\Controller::class, 'cetakpdf'])->name('cetakpdf');
+Route::post('sendmail', [App\Http\Controllers\Controller::class, 'sendmail'])->name('sendmail');

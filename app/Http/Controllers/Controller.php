@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\File;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\DB;
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
+use App\Mail\Emailku;
+use Illuminate\Support\Facades\Mail;
 
 class Controller extends BaseController
 {
@@ -136,6 +138,13 @@ class Controller extends BaseController
     public function cetakpdf(Request $request)
     {
         $pdf = PDF::loadView('contohpdf')->setPaper('a4', 'portrait');
-        return $pdf->download();
+        return $pdf->stream();
+    }
+
+    public function sendmail(Request $request)
+    {
+        $email = $request->email;
+        Mail::to($email)->send(new Emailku());
+        return "Email telah dikirim";
     }
 }

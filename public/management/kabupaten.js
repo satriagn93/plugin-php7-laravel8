@@ -68,13 +68,13 @@ $(document).ready(function(){
             name: 'id',
             class: "text-left",
             'orderable': false,
-            'searchable': false
+            'searchable': true
           },
           {
             data: 'name',
             name: 'name',
             'orderable': false,
-            'searchable': false,
+            'searchable': true,
             class: "text-left"
           }
         ]

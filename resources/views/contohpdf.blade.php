@@ -1,113 +1,241 @@
 <!doctype html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Aloha!</title>
+    <title>
+
+    </title>
+    <!--[if !mso]><!-- -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        #outlook a {
+            padding: 0;
+        }
+
+        .ReadMsgBody {
+            width: 100%;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+        .ExternalClass * {
+            line-height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        p {
+            display: block;
+            margin: 13px 0;
+        }
+    </style>
+    <!--[if !mso]><!-->
+    <style type="text/css">
+        @media only screen and (max-width:480px) {
+            @-ms-viewport {
+                width: 320px;
+            }
+
+            @viewport {
+                width: 320px;
+            }
+        }
+    </style>
+    <!--<![endif]-->
+    <!--[if mso]>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]-->
+    <!--[if lte mso 11]>
+        <style type="text/css">
+          .outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+
 
     <style type="text/css">
-        * {
-            font-family: Verdana, Arial, sans-serif;
+        @media only screen and (min-width:480px) {
+            .mj-column-per-100 {
+                width: 100% !important;
+            }
         }
+    </style>
 
-        table {
-            font-size: x-small;
-        }
 
-        tfoot tr td {
-            font-weight: bold;
-            font-size: x-small;
-        }
-
-        .gray {
-            background-color: lightgray
-        }
+    <style type="text/css">
     </style>
 
 </head>
 
-<body>
+<body style="background-color:white;">
+    <div class="mj-column-per-100 outlook-group-fix" style="font-size:13px;text-align:left;direction:ltr;display:inline-block;vertical-align:bottom;width:100%;">
 
-    <table width="100%">
-        <tr>
-            <td valign="top"><img src="https://via.placeholder.com/150" alt="" width="150" /></td>
-            <td align="right">
-                <h3>Shinra Electric power company</h3>
-                <pre>
-                Company representative name
-                Company address
-                Tax ID
-                phone
-                fax
-            </pre>
-            </td>
-        </tr>
+        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:bottom;" width="100%">
 
-    </table>
-
-    <table width="100%">
-        <tr>
-            <td><strong>From:</strong> Linblum - Barrio teatral</td>
-            <td><strong>To:</strong> Linblum - Barrio Comercial</td>
-        </tr>
-
-    </table>
-
-    <br />
-
-    <table width="100%">
-        <thead style="background-color: lightgray;">
             <tr>
-                <th>#</th>
-                <th>Description</th>
-                <th>Quantity</th>
-                <th>Unit Price $</th>
-                <th>Total $</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Playstation IV - Black</td>
-                <td align="right">1</td>
-                <td align="right">1400.00</td>
-                <td align="right">1400.00</td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Metal Gear Solid - Phantom</td>
-                <td align="right">1</td>
-                <td align="right">105.00</td>
-                <td align="right">105.00</td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Final Fantasy XV - Game</td>
-                <td align="right">1</td>
-                <td align="right">130.00</td>
-                <td align="right">130.00</td>
-            </tr>
-        </tbody>
+                <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
 
-        <tfoot>
-            <tr>
-                <td colspan="3"></td>
-                <td align="right">Subtotal $</td>
-                <td align="right">1635.00</td>
-            </tr>
-            <tr>
-                <td colspan="3"></td>
-                <td align="right">Tax $</td>
-                <td align="right">294.3</td>
-            </tr>
-            <tr>
-                <td colspan="3"></td>
-                <td align="right">Total $</td>
-                <td align="right" class="gray">$ 1929.3</td>
-            </tr>
-        </tfoot>
-    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                        <tbody>
+                            <tr>
+                                <td style="width:64px;">
 
+                                    <img height="auto" src="https://i.imgur.com/KO1vcE9.png" style="border:0;display:block;outline:none;text-decoration:none;width:100%;" width="64" />
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+
+                    <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:24px;font-weight:bold;line-height:22px;text-align:center;color:#525252;">
+                        Thank you for your order
+                    </div>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+
+                    <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:22px;text-align:left;color:#525252;">
+                        <p>Hi John,</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat ut est ac dignissim. Donec pulvinar ligula metus, sed imperdiet quam pretium at. Cras finibus hendrerit magna nec euismod. Ut eget
+                            justo vel enim ultrices pharetra. Morbi tellus libero, sollicitudin pulvinar porta ac, auctor sed neque.</p>
+                    </div>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+
+                    <table 0="[object Object]" 1="[object Object]" 2="[object Object]" border="0" style="cellspacing:0;color:#000;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;">
+                        <tr style="border-bottom:1px solid #ecedee;text-align:left;">
+                            <th style="padding: 0 15px 10px 0;">Item</th>
+                            <th style="padding: 0 15px;">Qt.</th>
+                            <th style="padding: 0 0 0 15px;" align="right">Price</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px 15px 5px 0;">Item number 1</td>
+                            <td style="padding: 0 15px;">1</td>
+                            <td style="padding: 0 0 0 15px;" align="right">$100,00</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0 15px 5px 0;">Shipping + Handling</td>
+                            <td style="padding: 0 15px;">1</td>
+                            <td style="padding: 0 0 0 15px;" align="right">$10,00</td>
+                        </tr>
+                        <tr style="border-bottom:2px solid #ecedee;text-align:left;padding:15px 0;">
+                            <td style="padding: 0 15px 5px 0;">Sales Tax</td>
+                            <td style="padding: 0 15px;">1</td>
+                            <td style="padding: 0 0 0 15px;" align="right">$10,00</td>
+                        </tr>
+                        <tr style="border-bottom:2px solid #ecedee;text-align:left;padding:15px 0;">
+                            <td style="padding: 5px 15px 5px 0; font-weight:bold">TOTAL</td>
+                            <td style="padding: 0 15px;"></td>
+                            <td style="padding: 0 0 0 15px; font-weight:bold" align="right">$120,00</td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+
+                    <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;line-height:16px;text-align:left;color:#a2a2a2;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat ut est ac dignissim. Donec pulvinar ligula metus, sed imperdiet quam pretium at.</p>
+                    </div>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+
+                    <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:24px;font-weight:bold;line-height:22px;text-align:center;color:#525252;">
+                        Let us know your experience
+                    </div>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+
+                    <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:22px;text-align:left;color:#525252;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat ut est ac dignissim. Donec pulvinar ligula metus, sed imperdiet quam pretium at. Cras finibus hendrerit magna nec euismod. Ut eget
+                            justo vel enim ultrices pharetra. Morbi tellus libero, sollicitudin pulvinar porta ac, auctor sed neque. </p>
+                    </div>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center" style="font-size:0px;padding:10px 25px;padding-top:30px;padding-bottom:50px;word-break:break-word;">
+
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
+                        <tr>
+                            <td align="center" bgcolor="#2F67F6" role="presentation" style="border:none;border-radius:3px;color:#ffffff;cursor:auto;padding:15px 25px;" valign="middle">
+                                <p style="background:#2F67F6;color:#ffffff;font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;">
+                                    <a href="https://www.htmlemailtemplates.net" style="color:#fff; text-decoration:none">
+                                        Check Shipping Status</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+
+                    <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;color:#525252;">
+                        Best regards,<br><br> Csaba Kissi<br>Elerion ltd., CEO and Founder<br>
+                        <a href="https://www.htmlemailtemplates.net" style="color:#2F67F6">htmlemailtemplates.net</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>
