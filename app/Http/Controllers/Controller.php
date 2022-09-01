@@ -20,9 +20,6 @@ class Controller extends BaseController
 {
     public function index()
     {
-        // $getpegawai = DB::table('pegawais')->get();
-        // dd($getpegawai);
-
         $curl = curl_init();
         curl_setopt_array($curl, [
             CURLOPT_URL => "https://kodepos-2d475.firebaseio.com/kota_kab/k69.json?print=pretty",
@@ -64,7 +61,7 @@ class Controller extends BaseController
         $responseprov = curl_exec($curlprov);
         curl_close($curlprov);
         $dprovinsi = json_decode($responseprov);
-
+        flash()->addInfo('Semangat ygy');
         return view('welcome', ['data' => $data], ['provinsi' => $dprovinsi]);
         // $data = Covid::orderBy('id', 'DESC')->get();
         // if (request()->ajax()) {
@@ -144,7 +141,7 @@ class Controller extends BaseController
     public function sendmail(Request $request)
     {
         $email = $request->email;
-        Mail::to($email)->send(new Emailku());
-        return "Email telah dikirim";
+        Mail::to('gogonjikotoram@gmail.com')->send(new Emailku());
+        return redirect('/');
     }
 }
